@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoSwipe Test</title>
+    <link rel="stylesheet" href="css/plugins.styles.css">
+    <link rel="stylesheet" href="css/main.styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="gallery-header">
+        <h2 class="header-title">Picture Gallery</h2>
+        <p class="header-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="gallery-search">
+        <form action="">
+          <input type="text" class="gallery-search-bar" placeholder="Search pictures...">
+        </form>
+      </div>
+      <div class="gallery-filters">
+        <button type="button" class="filter-button active">All</button>
+        <button type="button" class="filter-button">Nature</button>
+        <button type="button" class="filter-button">Cities</button>
+        <button type="button" class="filter-button">People</button>
+        <button type="button" class="filter-button">Animals</button>
+        <button type="button" class="filter-button">Technology</button>
+      </div>
+      <div class="gallery-grid">
+        <figure class="item" data-tag="mountains rivers nature trees" data-category="nature">
+          <a class="gallery-item" href="img/img-2400.jpg" data-pswp-width="1875" data-pswp-height="2500" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/img-2400.jpg" alt="Picture 1"/>
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 1</p>
+              <small>This is a beautiful lake.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="city winter snow" data-category="animals">
+          <a class="gallery-item" href="img/img-2500.jpg" data-pswp-width="1920" data-pswp-height="1200" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/img-2500.jpg" alt="Picture 2" />
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 2</p>
+              <small>A nice forest found in internet.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="clouds sky heaven grass people mountains" data-category="nature">
+          <a class="gallery-item" href="img/img-2600.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/img-2600.jpg" alt="Picture 3"/>
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 3</p>
+              <small>An amazing mountain range.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="computer phone iphone laptop coffee headphones watch technology" data-category="people technology">
+          <a class="gallery-item" href="img/graphic-design-1.jpg" data-pswp-width="2475" data-pswp-height="2475" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/graphic-design-1.jpg" alt="Picture 4">
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 4</p>
+              <small>Working on designing and creating multimedia components.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="tecnology coding web developer computer" data-category="technology">
+          <a class="gallery-item"  href="img/web-dev-2.jpg" data-pswp-width="1280" data-pswp-height="854" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/web-dev-2.jpg" alt="Picture 5">
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 5</p>
+              <small>Working on web development and coding software</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="people woman photograph" data-category="people">
+          <a class="gallery-item"  href="img/photography-1.jpg" data-pswp-width="1280" data-pswp-height="854" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/photography-1.jpg" alt="Picture 6">
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 6</p>
+              <small>A woman taking her better shot.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="man people photography nature trees mountains" data-category="people nature">
+          <a class="gallery-item"  href="img/photography-3.jpg" data-pswp-width="1280" data-pswp-height="854" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/photography-3.jpg"" alt="Picture 7">
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 7</p>
+              <small>Nothing better than being in the nature.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="web technology computer" data-category="technology">
+          <a class="gallery-item"  href="img/web-dev-4.jpeg" data-pswp-width="2000" data-pswp-height="1333" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/web-dev-4.jpeg" alt="Picture 8">
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 8</p>
+              <small>Coding is even easier than walking.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="city car buildings" data-category="city">
+          <a class="gallery-item"  href="img/logo-1.jpg" data-pswp-width="1000" data-pswp-height="563" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/logo-1.jpg" alt="Picture 9">
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 9</p>
+              <small>DeTeh look of a beautiful city.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        
+
+<!--         
+        <figure class="item" data-tag="" data-category="">
+          <a class="gallery-item"  href="" data-pswp-width="" data-pswp-height="" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="" alt="">
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p></p>
+              <small></small>
+            </figcaption>
+          </a>
+        </figure>
+ -->
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="container">
+    <div class="row">
+      <div class="footer-content">
+        <p>Disigned by <a href="#">Feguens Poitevien</a></p>
+        <small>Copyright &#169; October 2022 | All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+    
+    
+    
+  
+    <script src="js/plugins.min.js"></script>
+    <script src="js/main.script.js"></script>
+</body>
+</html>
