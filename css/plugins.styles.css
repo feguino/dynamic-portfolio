@@ -121,6 +121,7 @@
   border-radius: 2rem;
   color: #4f4f4f;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .filter-button.active{
