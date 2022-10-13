@@ -182,7 +182,6 @@ lightbox.on("afterInit", () => {
       if(pswpcontainer.innerHTML == ''){
         return
       }
-      console.log("screen resized")
       compressScreen();
     } else {
       expandScreen();
@@ -201,37 +200,17 @@ function getContainer() {
 }
 
 
-var fullscreenExit = document.getElementById("pswp__icn-fullscreen-exit");
-var fullscreenRequest = document.getElementById("pswp__icn-fullscreen-request");
-
 function expandScreen() {
   setTimeout(function () {
-    
- /*    if (fullscreenExit){
-      fullscreenExit.style.display ="inline";
-      console.log('expand screen')
-    }
-    if(fullscreenRequest){
-      fullscreenRequest.style.display ="none";
-    } */
-    document.getElementById("pswp__icn-fullscreen-exit").style.display =
-      "inline";
-    document.getElementById("pswp__icn-fullscreen-request").style.display =
-      "none";
+    document.getElementById("pswp__icn-fullscreen-exit").style.display = "inline";
+    document.getElementById("pswp__icn-fullscreen-request").style.display = "none";
   }, 300);
 }
 
 function compressScreen() {
    setTimeout(function () {
-    /* if(fullscreenExit){
-      fullscreenExit.style.display = "none";
-    }
-    if(fullscreenRequest){
-      fullscreenRequest.style.display ="inline";
-    } */
     document.getElementById("pswp__icn-fullscreen-exit").style.display = "none";
-    document.getElementById("pswp__icn-fullscreen-request").style.display =
-      "inline";
+    document.getElementById("pswp__icn-fullscreen-request").style.display = "inline";
   }, 300);
 }
 
