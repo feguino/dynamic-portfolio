@@ -142,7 +142,10 @@ lightbox.on("uiRegister", function () {
       inner:
         '<g class="pwsp-caption-on"><path fill-rule="evenodd" clip-rule="evenodd" d="M84.5714 16C46.7005 16 16 46.7005 16 84.5714V427.429C16 465.3 46.7005 496 84.5714 496H427.429C465.3 496 496 465.3 496 427.429V84.5714C496 46.7005 465.3 16 427.429 16H84.5714ZM82.6122 55.1837C67.4639 55.1837 55.1837 67.4639 55.1837 82.6122V429.388C55.1837 444.536 67.4639 456.816 82.6122 456.816H429.388C444.536 456.816 456.816 444.536 456.816 429.388V82.6122C456.816 67.4639 444.536 55.1837 429.388 55.1837H82.6122Z"/><path d="M159.304 320.212C185.724 320.212 210.322 308.369 225.809 287.416C242.511 266.462 209.714 242.776 193.923 263.425C185.724 274.661 174.184 280.431 159.304 280.431C124.686 280.431 110.413 250.064 110.413 212.408C110.413 176.271 124.078 144.385 159.304 144.385C174.184 144.385 185.42 150.155 194.227 161.087C209.107 181.13 241.6 158.658 225.505 136.793C209.714 115.536 185.724 104.604 159.304 104.604C104.036 104.604 70.3282 150.762 70.3282 212.408C70.3282 272.536 102.214 320.212 159.304 320.212Z"/><path d="M368.899 320.212C395.318 320.212 419.916 308.369 435.403 287.416C452.105 266.462 419.308 242.776 403.517 263.425C395.318 274.661 383.778 280.431 368.899 280.431C334.28 280.431 320.007 250.064 320.007 212.408C320.007 176.271 333.672 144.385 368.899 144.385C383.778 144.385 395.014 150.155 403.821 161.087C418.701 181.13 451.194 158.658 435.099 136.793C419.308 115.536 395.318 104.604 368.899 104.604C313.63 104.604 279.922 150.762 279.922 212.408C279.922 272.536 311.808 320.212 368.899 320.212Z"/><path d="M151.184 364.735C151.184 356.619 157.762 350.041 165.878 350.041H421.551C429.666 350.041 436.245 356.619 436.245 364.735C436.245 372.85 429.666 379.429 421.551 379.429H165.878C157.762 379.429 151.184 372.85 151.184 364.735Z"/><path d="M94.3673 409.796C94.3673 401.681 100.946 395.102 109.061 395.102H422.531C430.646 395.102 437.224 401.681 437.224 409.796C437.224 417.911 430.646 424.49 422.531 424.49H109.061C100.946 424.49 94.3673 417.911 94.3673 409.796Z"/></g><rect class="pwsp-caption-off" x="486" y="515" width="692" height="50" rx="25" transform="rotate(-135 486 515)"/>',
     },
-    onClick: function (el) {
+    onInit: function() {
+
+    },
+    onClick: function () {
       document
         .querySelector(".pswp__button--caption-icon")
         .classList.toggle("hidden");
@@ -155,13 +158,6 @@ lightbox.on("uiRegister", function () {
   pswpContainer.style.display = "block";
   pswpContainer.style.opacity = 1;
 
-  window.addEventListener("resize", () => {
-    if (!document.fullscreenElement) {
-      compressScreen();
-    } else {
-      expandScreen();
-    }
-  });
 });
 
 lightbox.on("close", () => {
@@ -177,6 +173,21 @@ lightbox.on("close", () => {
   }
 
   document.querySelector(".filter-button:first-child").click();
+
+});
+
+lightbox.on("afterInit", () => {
+  window.addEventListener("resize", () => {
+    if (!document.fullscreenElement) {
+      if(pswpcontainer.innerHTML == ''){
+        return
+      }
+      console.log("screen resized")
+      compressScreen();
+    } else {
+      expandScreen();
+    }
+  }); 
 });
 
 lightbox.init();
@@ -189,8 +200,20 @@ function getContainer() {
   return pswpContainer;
 }
 
+
+var fullscreenExit = document.getElementById("pswp__icn-fullscreen-exit");
+var fullscreenRequest = document.getElementById("pswp__icn-fullscreen-request");
+
 function expandScreen() {
   setTimeout(function () {
+    
+ /*    if (fullscreenExit){
+      fullscreenExit.style.display ="inline";
+      console.log('expand screen')
+    }
+    if(fullscreenRequest){
+      fullscreenRequest.style.display ="none";
+    } */
     document.getElementById("pswp__icn-fullscreen-exit").style.display =
       "inline";
     document.getElementById("pswp__icn-fullscreen-request").style.display =
@@ -199,7 +222,13 @@ function expandScreen() {
 }
 
 function compressScreen() {
-  setTimeout(function () {
+   setTimeout(function () {
+    /* if(fullscreenExit){
+      fullscreenExit.style.display = "none";
+    }
+    if(fullscreenRequest){
+      fullscreenRequest.style.display ="inline";
+    } */
     document.getElementById("pswp__icn-fullscreen-exit").style.display = "none";
     document.getElementById("pswp__icn-fullscreen-request").style.display =
       "inline";
