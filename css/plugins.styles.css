@@ -52,7 +52,7 @@
 }
 
 .gallery-header .header-description{
-  margin: 0.5rem 0.5rem 0 0.5rem;
+  margin: 0.5rem calc(0.525rem + 1.8vw) 0 calc(0.525rem + 1.8vw);
   font-size: 0.85rem;
   opacity: 0.8;
 }
