@@ -51,6 +51,10 @@ const lightboxOptions = {
   bgOpacity: 0.95,
   wheelToZoom: true,
   errorMsg: "The image cannot be loaded.",
+  closeTitle: 'Close',
+  zoomTitle: 'Zoom',
+  arrowPrevTitle: 'Previous',
+  arrowNextTitle: 'Next',
   indexIndicatorSep: " / ",
   appendToEl: pswpcontainer,
 };
@@ -177,6 +181,35 @@ lightbox.on("close", () => {
 });
 
 lightbox.on("afterInit", () => {
+  const pswpUIElements = document.querySelector('.pswp--open');
+  let idleTimer = null;
+  let idleState = false;
+
+  if(!window.matchMedia("(pointer: coarse)").matches) {
+    // touchscreen
+    displayUIElements(5000)
+    document.onmousemove = ()=>{displayUIElements(5000)};
+    document.onkeydown = ()=>{displayUIElements(5000)};
+  }
+
+  function displayUIElements(time){
+    clearTimeout(idleTimer);
+
+    if (idleState==true){
+      if(!pswpUIElements.classList.contains('pswp--ui-visible')){
+        pswpUIElements.classList.add('pswp--ui-visible')
+      }
+    }
+    idleState = false;
+    idleTimer = setTimeout(()=>{
+      if(pswpUIElements.classList.contains('pswp--ui-visible')){
+        pswpUIElements.classList.remove('pswp--ui-visible')
+      }
+      
+      idleState = true;
+    }, time)
+  }
+ 
   window.addEventListener("resize", () => {
     if (!document.fullscreenElement) {
       if(pswpcontainer.innerHTML == ''){
@@ -187,6 +220,7 @@ lightbox.on("afterInit", () => {
       expandScreen();
     }
   }); 
+
 });
 
 lightbox.init();
@@ -246,3 +280,6 @@ function toggleFullscreen(elem) {
     }
   }
 }
+
+
+

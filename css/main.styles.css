@@ -45,6 +45,38 @@ body{
   padding: 0;
 }
 
+.github-icon{
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.github-icon a{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.github-icon img{
+  width: 90px;
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .github-icon img{
+    width: 80px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .github-icon img{
+    width: 70px;
+  }
+}
+
 .container{
   position: relative;
   max-width: 1230px;

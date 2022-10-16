@@ -7,7 +7,6 @@
     <meta name="description" content="Dynamic Portfolio, made from Muuri and PhotoSwipe JavaScript libraries. It's a dynamic gallery or content viewer with sorting and many other options.">
     <meta name="keywords" content="dynamic portfolio, gallery, portfolio, javascript, muuri, photoswipe, js, feguens, poitevien">
     <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Feguens Poitevien">
     
@@ -42,12 +41,19 @@
 </head>
 <body>
 
+  <div class="github-icon">
+    <a href="https://github.com/feguino/dynamic-portfolio" target="_blank" rel="noopener" title="GitHub Repository">
+      <img src="./img/github.png" alt="Fork me on GitHub">
+    </a>
+  </div>
+
   <div class="container">
     <div class="row">
 
       <div class="gallery-header">
-        <h2 class="header-title">Picture Gallery</h2>
-        <p class="header-description">My name is Feguens, I'm a computer engineer and web developer. This project is a dymanic portfolio that can be integrated in any website and will work across any browser, made with 2 amazing javascript libraries: Muuri and Photoswipe</p>
+        <h2 class="header-title">Dynamic Portfolio</h2>
+        <p class="header-description">My name is Feguens, I'm a computer engineer and web developer. <br>
+          <span class="">This project is a dymanic portfolio that can be integrated in any website and will work across any browser, made with 2 amazing javascript libraries: Muuri and Photoswipe</span></p>
       </div>
 
       <div class="gallery-search">
@@ -58,9 +64,9 @@
 
       <div class="gallery-filters">
         <button type="button" class="filter-button active">All</button>
-        <button type="button" class="filter-button">Nature</button>
-        <button type="button" class="filter-button">Cities</button>
         <button type="button" class="filter-button">People</button>
+        <button type="button" class="filter-button">Cities</button>
+        <button type="button" class="filter-button">Nature</button>
         <button type="button" class="filter-button">Animals</button>
         <button type="button" class="filter-button">Technology</button>
       </div>
@@ -131,31 +137,33 @@
           </a>
         </figure>
 
-        <figure class="item" data-tag="people woman photograph" data-category="people">
-          <a class="gallery-item"  href="img/photography-1.jpg" data-pswp-width="1280" data-pswp-height="854" target="_blank" rel="noopener">
+        <figure class="item" data-tag="man people photography nature trees mountains" data-category="people nature">
+          <a class="gallery-item"  href="img/photography-3.jpg" data-pswp-width="1280" data-pswp-height="854" target="_blank" rel="noopener">
             <div class="img-content">
-              <img class="gallery-img" src="img/photography-1.jpg" alt="Picture 6">
+              <img class="gallery-img" src="img/photography-3.jpg"" alt="Picture 6">
               <div class="overlay"></div>
             </div>
             <figcaption class="hidden-caption-content">
               <p>Picture 6</p>
+              <small>Nothing better than being in the nature.</small>
+            </figcaption>
+          </a>
+        </figure>
+
+        <figure class="item" data-tag="people woman photograph" data-category="people">
+          <a class="gallery-item"  href="img/photography-1.jpg" data-pswp-width="1280" data-pswp-height="854" target="_blank" rel="noopener">
+            <div class="img-content">
+              <img class="gallery-img" src="img/photography-1.jpg" alt="Picture 7">
+              <div class="overlay"></div>
+            </div>
+            <figcaption class="hidden-caption-content">
+              <p>Picture 7</p>
               <small>A woman taking her best shot.</small>
             </figcaption>
           </a>
         </figure>
 
-        <figure class="item" data-tag="man people photography nature trees mountains" data-category="people nature">
-          <a class="gallery-item"  href="img/photography-3.jpg" data-pswp-width="1280" data-pswp-height="854" target="_blank" rel="noopener">
-            <div class="img-content">
-              <img class="gallery-img" src="img/photography-3.jpg"" alt="Picture 7">
-              <div class="overlay"></div>
-            </div>
-            <figcaption class="hidden-caption-content">
-              <p>Picture 7</p>
-              <small>Nothing better than being in the nature.</small>
-            </figcaption>
-          </a>
-        </figure>
+       
 
         <figure class="item" data-tag="web technology computer" data-category="technology">
           <a class="gallery-item"  href="img/web-dev-4.jpeg" data-pswp-width="2000" data-pswp-height="1333" target="_blank" rel="noopener">

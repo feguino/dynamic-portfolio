@@ -5,6 +5,7 @@
   --item-v-margin: 5px;
 }
 
+/*Muuri Gallery Grid Styles*/
 .gallery-grid{
   position: relative;
   width: 100%;
@@ -23,7 +24,7 @@
     width: calc(var(--item-width) + 16px);;
   }
 
-  .pswp__button:not(:last-child) {
+  .pswp__top-bar .pswp__button:not(:last-child) {
     margin: 0 2px !important;
   }
 }
@@ -49,10 +50,18 @@
 }
 
 .gallery-header .header-description{
-  margin: 0.5rem calc(0.725rem + 3vw) 0 calc(0.725rem + 3vw);
+  margin: 0.5rem calc(0.725rem + 3vw) 0.5rem calc(0.725rem + 3vw);
   font-size: 0.85rem;
   opacity: 0.8;
 }
+
+.gallery-header .header-description span{
+  font-size: 0.725rem;
+  color: #222;
+  line-height: 0.675rem;
+
+}
+
 
 .gallery-search{
   position: relative;
@@ -419,6 +428,7 @@ and show (for example fade in) when PhotoSwipe is opened
 	opacity: 0.85;
 	-webkit-appearance: none;
 	-webkit-touch-callout: none;
+  transition: margin 0.3s ease-in-out;
 }
 
 .pswp__button:hover,
@@ -446,8 +456,8 @@ and show (for example fade in) when PhotoSwipe is opened
   position: absolute;
   top: 14px;
   left: 9px;
-  width: 22px;
-  height: 22px;
+  width: 19px;
+  height: 19px;
   overflow: hidden;
   pointer-events: none;
 }
@@ -502,8 +512,8 @@ div.pswp__img--placeholder,
 .pswp__button--arrow {
   position: absolute;
   top: 0;
-  width: 75px;
-  height: 100px;
+  width: 40px;
+  height: 60px;
   top: 50%;
   margin-top: -50px;
 }
@@ -515,9 +525,9 @@ div.pswp__img--placeholder,
 
 .pswp__button--arrow .pswp__icn {
   top: 50%;
-  margin-top: -30px;
-  width: 30px;
-  height: 30px;
+  margin-top: -15px;
+  width: 25px;
+  height: 25px;
   background: none;
   border-radius: 0;
 }
