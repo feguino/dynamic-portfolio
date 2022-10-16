@@ -62,11 +62,11 @@ body{
 }
 
 .github-icon img{
-  width: 90px;
+  width: calc(60px + 2vw);
   transition: all 0.4s ease-in-out;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .github-icon img{
     width: 80px;
   }
@@ -75,7 +75,7 @@ body{
   .github-icon img{
     width: 70px;
   }
-}
+} */
 
 .container{
   position: relative;
